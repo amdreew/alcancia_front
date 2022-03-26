@@ -44,7 +44,7 @@
            <!-- agrupar los datos con es  -->
     <tr *ngFor="let datos of obejctMonedas">
     <th>{{datos.denomination.description}}</th>
-    <td>{{datos.denomination.value}}</td>
+    <td>{{datos.amount}}</td>
     <th>{{datos.amount * datos.denomination.value}}</th>
   </tr>
 
