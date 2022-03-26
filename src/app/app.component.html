@@ -1,0 +1,55 @@
+
+<!-- titulo de la pagina-->
+<div class="container" > <h1 id="titulo">Alcancia</h1><div class="row">
+
+
+<!-- boton agregar -->
+  <div class="col-md-6">
+    <button (click)="addMoney()" class="button">Agregar Monedas</button></div>
+
+
+ <!-- identificadores de resultados  -->
+  <div class="col-md-6">
+    <h6>Cantidad En Peso Colombiano:</h6> <b>{{sumall}}</b>
+    <h6>Monedas:</h6> <b>{{monedas}}</b>
+
+  <!-- botones y identificadores -->
+<div class="container row" *ngIf="cambio">
+
+  <div class="col-md-2" *ngFor="let denomination of denominations">
+    <button (click)="toggle(denomination)" class="button">{{denomination.value}} PESOS</button>
+  </div>
+
+  <div class="col-md-2">
+    <button (click)="clean()" class="buttonxd button">Abrir alcancia</button>
+  </div>
+</div>
+<br>
+<div><h2>Mostrar Cantidad De Monedas</h2></div>
+
+
+<!-- tabla de resultados -->
+
+<br>
+<div> <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Monedas</th>
+      <th scope="col">Cantidad</th>
+      <th scope="col">Valor</th>
+
+    </tr>
+  </thead>
+  <tbody>
+           <!-- agrupar los datos con es  -->
+    <tr *ngFor="let datos of obejctMonedas">
+    <th>{{datos.denomination.description}}</th>
+    <td>{{datos.denomination.value}}</td>
+    <th>{{datos.amount * datos.denomination.value}}</th>
+  </tr>
+
+  </tbody>
+</table></div>
+
+</div>
+</div>

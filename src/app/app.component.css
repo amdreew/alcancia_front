@@ -1,0 +1,33 @@
+#titulo {
+  text-align: center;
+  color: Tomato;
+}
+
+.button {
+  background-color: #02008d;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.col-md {
+  padding-top: 8px;
+}
+
+h2 {
+  padding: 12px;
+  text-align: center;
+  background-color: rgb(44, 144, 184);
+}
+
+.buttonxd {
+  background-color: red;
+}
+
+.button {
+  user-select: none;
+}
